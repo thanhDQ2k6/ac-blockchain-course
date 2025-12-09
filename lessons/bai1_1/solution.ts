@@ -21,6 +21,7 @@ export function isValidBlock(block: Block): boolean {
     .update(dataToHash)
     .digest("hex");
 
+  // So sánh hash tính toán với hash hiện tại của block
   if (calculatedHash === block.current_hash) {
     return true;
   } else {
